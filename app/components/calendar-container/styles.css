@@ -1,0 +1,44 @@
+@value primary-color: #005EB8;
+
+.container {
+  height: 100vh;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.sidebar {
+  flex: 0 0 300px;
+  border-right: 2px solid primary-color;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.section {
+  flex: 1 1 auto;
+  padding: 20px;
+  overflow: auto;
+}
+
+.title {
+  color: #333;
+  text-align: center;
+  font-size: 36px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.menu-item {
+  list-style: none;
+  border-bottom: 2px solid primary-color;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  padding-left: 10px;
+  color: primary-color;
+}
+
+.menu-item:hover {
+  color: #fff;
+  background-color: primary-color;
+}
+

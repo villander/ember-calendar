@@ -1,0 +1,28 @@
+<div 
+  local-class="calendar"
+  data-test-peek-calendar
+  {{did-update this.setupCalendar @timeslotsAggregated}}
+>
+  {{#each-in @timeslotsAggregated as |day timeslots|}}
+      <div data-test-slot-day="{{day}}" local-class="slot-day">
+        <p data-test-slot-day-title local-class="slot-title">{{day}}</p>
+        {{#each timeslots as |timeslot index|}}
+          <button
+            data-test-slot-button={{index}}
+            local-class="slot-picker-button"
+            {{on "click" (fn this.onClickSlot timeslot)}}
+          >
+            {{timeslot.startTime}} - {{timeslot.endTime}}
+          </button>
+        {{/each}}
+      </div>
+  {{/each-in}}
+</div>  
+
+{{#if this.currentTimeslot}}
+  <div local-class="activity-control">
+    <span data-test-max-guests local-class="activity-field">Max Guests: {{this.currentTimeslot.maxGuests}}</span>
+    <span data-test-booked-count local-class="activity-field">Booked Count: {{this.currentTimeslot.bookedCount}}</span>
+    <span data-test-available-spots local-class="activity-field">Available Spots: {{this.currentTimeslot.availableSpots}}</span>
+  </div>
+{{/if}}

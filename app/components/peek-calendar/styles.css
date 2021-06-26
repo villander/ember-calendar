@@ -1,0 +1,61 @@
+@value primary-color: #005EB8;
+
+.calendar {
+  width: 100%;
+  display: flex;
+}
+
+.slot-day {
+  width: 20%;
+  margin-right: 10px;
+}
+
+.slot-title {
+  border-radius: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: primary-color;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.slot-picker-button {
+  font-size: 16px;
+  border-radius: 4px;
+  height: 43px;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+  border: 2px solid primary-color;
+  background-color: #fff;
+  color: primary-color;
+  font-weight: 600;
+
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slot-picker-button:hover {
+  background-color: primary-color;
+  color: #fff;
+  cursor: pointer;
+}
+
+.activity-control {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.activity-field {
+  padding: 5px;
+  color: primary-color;
+  font-weight: 500;
+}
+

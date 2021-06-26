@@ -1,0 +1,17 @@
+
+<h1 local-class="title">Peek Calendar</h1>
+
+<div local-class="container">
+  <div local-class="sidebar" data-test-sidebar>
+    {{#each this.activities as |activityName index|}}
+      <ul>
+        <li data-test-menu-item={{index}} local-class="menu-item" {{on "click" (perform this.fetchTimeslotsTask activityName)}}>{{activityName}}</li>
+      </ul>
+    {{/each}}
+  </div>
+
+  <div local-class="section">
+    <PeekCalendar @timeslotsAggregated={{this.fetchTimeslotsTask.lastSuccessful.value}} />
+  </div>
+
+</div>
